@@ -1,8 +1,6 @@
 console.log("index is connected")
 
 
-
-
 function removeActiveClass(){
 const removeClasses= document.getElementsByClassName("active");
 
@@ -11,6 +9,8 @@ for(let removeClass of removeClasses){
     removeClass.classList.remove("active")
 }
 }
+
+
 
 function loadCategories(){
     fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
@@ -45,10 +45,6 @@ fetch(url)
     removeActiveClass()
     const clickedButton= document.getElementById(`btn-${id}`);
     clickedButton.classList.add("active");
-
-
-
-
 
     
     displayVideos(data.category)
@@ -92,7 +88,8 @@ fetch(url)
          <div class=" py-10 font-bold text-2xl col-span-full inline-flex flex-col justify-center items-center ">
             <img class="p-5" src="assets/Icon.png" alt="">
             <p>Oops!! Sorry, There is no content here</p>
-         </div>`;
+         </div>
+         `;
     };
         videos.forEach(video => {
        
